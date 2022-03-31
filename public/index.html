@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/css/bootstrap.min.css"
+    />
+    <title>Coinbase api</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="coinbase-api" class="my-3">Coinbase Api</h1>
+      <h3 id="run-the-app">Run the app</h3>
+      <ol>
+        <li>
+          To install essential packages: <code>yarn</code> or <code>npm i</code>
+        </li>
+        <li>
+          To run the server: <code>yarn dev</code> or <code>npm run dev</code>
+        </li>
+        <li>
+          To run tests: <code>yarn test</code> or <code>npm run test</code>
+        </li>
+      </ol>
+      <h3 id="routes">Routes</h3>
+      <p>
+        Base URL: <a href="http://localhost:5000">http://localhost:5000/</a>
+      </p>
+      <p>
+        Route:
+        <a href="/api/getBitcoinInfo/<currency>"
+          >/api/getBitcoinInfo/{currency}</a
+        >
+      </p>
+      <ul>
+        <li>
+          This will return current, highest and lowest rate for past 30 days for
+          given currency.
+        </li>
+        <li>
+          <p>Available currencies: <code> USD | GDB | EUR</code></p>
+        </li>
+        <li>
+          <span>Response:</span>
+          <pre class="bg-light p-4 mt-2"><code class="lang-javascript">{
+    <span class="hljs-string">"currency"</span>: <span class="hljs-string">"USD"</span>, // <span class="hljs-keyword">if</span> currency <span class="hljs-keyword">is</span> <span class="hljs-symbol">'USD</span>'
+    <span class="hljs-string">"currentRate"</span>: <span class="hljs-number">47035.3</span>,
+    <span class="hljs-string">"maxRate"</span>: <span class="hljs-number">48173.2</span>,
+    <span class="hljs-string">"minRate"</span>: <span class="hljs-number">37788.0583</span>
+}
+</code></pre>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
